@@ -32,13 +32,6 @@ let myvimroot = docroot . 'vimsetting/'
 " let sub_rcname = myvimroot . 'myrc_sub.vim'
 " execute 'source' sub_rcname 
 
-" mymswin.vim
-if g:hostname=="CELIM-PC"
-    let sub_rcname = myvimroot . 'mymswin.vim'
-    execute 'source' sub_rcname 
-    behave mswin
-end    
-
 "====================================================================
 " my setting
 "======================================================================
@@ -158,17 +151,6 @@ nmap <S-F8> @b
 map <C-F8> j.
 " map <M-F8> @@
 
-if g:hostname=="CELIM-PC"
-    map <F9>   :e d:/my/Dropbox/document/vim/index.txt<CR>
-    map <C-F9> :e d:/my/Dropbox/document/vim/mywork.txt<CR>
-    map <S-F9> :e d:/my/Dropbox/python/test.py<CR>
-else
-    map <F9>   :e ~/Dropbox/document/vim/index.txt<CR>
-end
-map <M-F9> :e d:/my/Dropbox/write<CR>
-
-nmap <C-CR> :python mypy.exec_currLine() <cr>
-
 " nnoremap <F10> :call SetTagFiles()<cr>
 " reload
 map <F10> :e %<CR>   
@@ -196,9 +178,6 @@ imap <S-Tab> <C-y>,
 " calculator
 " :command! -nargs=+ Calc :py print <args>
 :command! -nargs=+ C :py print <args>
-":py from math import *
-" :py import sys; sys.path.append('d:/my/Dropbox/lib/')
-" :py from s2pylib import *
 
 "-------------------------------------------------------------------------------- 
 " plugin mapping
@@ -246,34 +225,6 @@ vmap <Leader>a< :Tabularize /<=<CR>
 " " ragtag
 " " imap     <C-/>    <C-X> /   " don't work
 "  
-" 
-" "-------------------------------------------------------------------------------- 
-" " leader mapping
-" "-------------------------------------------------------------------------------- 
-" " my favorite file
-" if g:hostname=="CELIM-PC"
-"     map <Leader>1 <ESC>:e d:/my/Dropbox/s2pyd/src/s2pylib.pyx<CR>
-"     map <Leader>2 <ESC>:e d:/my/Dropbox/python/s2lab/hsignal.py<CR>
-"     map <Leader>3 <ESC>:e d:/work/s2py/s2py.py<CR>
-"     map <Leader>4 <ESC>:e d:/work/vhdl_nplate/src/rx/rx_top.s2lab<CR>
-"     map <Leader>5 <ESC>:e d:/my/Dropbox/slab/src/parser_slab.py<CR>
-"     map <Leader>6 <ESC>:e .<CR>
-"     map <Leader>7 <ESC>:e d:/my/Dropbox/NDTCP2/ndtindex.txt<CR>
-"     map <Leader>8 <ESC>:e .<CR>
-"     map <Leader>9 <ESC>:e .<CR>
-"     map <Leader>0 <ESC>:e d:/my/Dropbox/document/vimsetting/myrc.vim<CR>
-" else
-"     map <Leader>1 <ESC>:e .<CR>
-"     map <Leader>2 <ESC>:e .<CR>
-"     map <Leader>3 <ESC>:e .<CR>
-"     map <Leader>4 <ESC>:e .<CR>
-"     map <Leader>5 <ESC>:e .<CR>
-"     map <Leader>6 <ESC>:e .<CR>
-"     map <Leader>7 <ESC>:e .<CR>
-"     map <Leader>8 <ESC>:e .<CR>
-"     map <Leader>9 <ESC>:e .<CR>
-"     map <Leader>0 <ESC>:e ~/Dropbox/document/vimsetting/myrc.vim<CR>
-" end
 " 
 " " map <Leader>n <ESC>:NERDTree<CR>
 " 
@@ -381,15 +332,7 @@ vmap <Leader>a< :Tabularize /<=<CR>
 " au BufRead,BufNewFile *.sc set filetype=cpp 
 " au BufRead,BufNewFile *.sh set filetype=cpp 
 " 
-" if g:hostname=="CELIM-PC"
-"     "au! Syntax text source d:/my/Dropbox/document/vimsetting/mysyntax.vim
-"     "au! Syntax ucf source d:/my/Dropbox/document/vimsetting/mysyntax.vim
-" else
-"     "au! Syntax text source ~/Dropbox/document/vimsetting/mysyntax.vim
-"     "au! Syntax ucf source ~/Dropbox/document/vimsetting/mysyntax.vim
-" end
 " 
-" " au! Syntax boo source d:/my/Dropbox/document/vimsetting/vimfiles/syntax/boo.vim
 " 
 " autocmd! BufNewFile * silent! 0r c:/vimsetting/tmpl.%:e
 " 
