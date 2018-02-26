@@ -1,20 +1,4 @@
-"================================================================================
-" VIM RC
-"
-" 2003/06 
-" 2008/06    : execute python 
-" 2009/05    : comment with F3 in all extension 
-"
-" 2012/02    : vim-python
-" 2012/03/05 : function! GetVisual() range 
-" 2012/03/28 : C-F6 : make image file from clipboard
-" 2012/04/06 : syntax highlighting for text file
-" 2012/11/05 : change a lot, breakthroug in using vim 
-" 2012/11/06 : reload mypy.py when <Leader>, is pressed for executing the testScript()
-" 2012/11/07 : use tcomments, though use the S-F3 also
-" 2012/11/10 : start shell and explorer 
-" 2012/11/12 : move functions into myrc_sub.vim
-"================================================================================
+
 set nocompatible
 filetype on            " enables filetype detection
 filetype plugin on     " enables filetype specific plugins
